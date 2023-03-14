@@ -15,14 +15,14 @@ import './Components/css/df.css';
 function App() {
 
   const [todos, setTodos] = useState([]);
-  const [error, setError] = useState({ type: ``, message: `` })
+  const [error, setError] = useState({ type: ``, message: ``, modalShown: false })
   const [createUpdateStatus, setCreateUpdateStatus] = useState(``);
 
   const getTodosHandler = async () => {
     const externalDataCallResult = await getTodos();
-
+    console.log(externalDataCallResult.error);
     if (externalDataCallResult?.error) {
-      const errorObject = { ...externalDataCallResult.error };
+      const errorObject = { ...externalDataCallResult.error, modalShown: false };
       errorObject.message = `There was a problem getting the todos: ${externalDataCallResult.error.message}`;
       setError(errorObject);
     }
@@ -40,7 +40,7 @@ function App() {
     const externalDataCallResult = await submitTodo(todo);
     if (externalDataCallResult?.error) {
 
-      const errorObject = { ...externalDataCallResult.error };
+      const errorObject = { ...externalDataCallResult.error, modalShown: false };
       errorObject.message = `There was a problem adding the todo: ${externalDataCallResult.error.message}`;
 
       return setError(errorObject);
@@ -54,7 +54,7 @@ function App() {
 
     if (externalDataCallResult?.error) {
 
-      const errorObject = { ...externalDataCallResult.error };
+      const errorObject = { ...externalDataCallResult.error, modalShown: false };
       errorObject.message = `There was a problem updating the todo: ${externalDataCallResult.error.message}`;
 
       return setError(errorObject);
@@ -63,9 +63,13 @@ function App() {
     getTodosHandler();
   }
 
+  const handleModalClose = () => {
+    setError({ ...error, modalShown: true });
+  }
+
   return (
     <>
-      {error.type && <Modal handleClose={() => setError({ type: ``, message: `` })} message={error.message} />}
+      {error.type && !error.modalShown && <Modal handleClose={handleModalClose} message={error.message} />}
       {createUpdateStatus && <Modal handleClose={() => setCreateUpdateStatus(``)} message={createUpdateStatus} />}
       <div className="container">
         <Header />
