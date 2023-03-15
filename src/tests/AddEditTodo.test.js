@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { createMemoryRouter, MemoryRouter, RouterProvider } from 'react-router-dom';
+import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 
 import sampleTodos from '../sampleTodos.json';
@@ -113,7 +113,7 @@ describe(`Tests for AddEditTodo`, () => {
             render(<RouterProvider router={router} />);
         });
 
-        test(`it should render a h3 with 'Add Todo' when no todo is supplied`, async () => {
+        test(`it should render a h3 with 'Edit Todo' when an _id is supplied`, async () => {
             const addTodoHeading = screen.getByText(/edit todo/i);
             expect(addTodoHeading).toBeInTheDocument();
         });

@@ -20,7 +20,6 @@ function App() {
 
   const getTodosHandler = async () => {
     const externalDataCallResult = await getTodos();
-    console.log(externalDataCallResult.error);
     if (externalDataCallResult?.error) {
       const errorObject = { ...externalDataCallResult.error, modalShown: false };
       errorObject.message = `There was a problem getting the todos: ${externalDataCallResult.error.message}`;
