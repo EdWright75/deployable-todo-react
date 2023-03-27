@@ -68,7 +68,7 @@ describe('App Tests', () => {
 
       const editLinks = await screen.findAllByText(/edit/i);
       // userEvent.click(editLinks[0]);
-      await fireEvent.click(editLinks[0]);
+      fireEvent.click(editLinks[0]);
       const submitButton = await screen.findByDisplayValue(/submit/i)
       userEvent.click(submitButton);
 
@@ -116,7 +116,7 @@ describe('App Tests', () => {
         render(<MemoryRouter><App /></MemoryRouter>);
 
         const editLinks = await screen.findAllByText(/edit/i);
-        userEvent.click(editLinks[0]);
+        fireEvent.click(editLinks[0]);
         const submitButton = await screen.findByDisplayValue(/submit/i)
         userEvent.click(submitButton);
 
@@ -136,7 +136,7 @@ describe('App Tests', () => {
 
         const editLinks = await screen.findAllByText(/edit/i);
         // userEvent.click(editLinks[0]);
-        await fireEvent.click(editLinks[0]);
+        fireEvent.click(editLinks[0]);
         const submitButton = await screen.findByDisplayValue(/submit/i)
         userEvent.click(submitButton);
 
@@ -155,7 +155,7 @@ describe('App Tests', () => {
         render(<MemoryRouter><App /></MemoryRouter>);
 
         const editLinks = await screen.findAllByText(/edit/i);
-        userEvent.click(editLinks[0]);
+        fireEvent.click(editLinks[0]);
         const submitButton = await screen.findByDisplayValue(/submit/i)
         userEvent.click(submitButton);
 
@@ -195,7 +195,7 @@ describe('App Tests', () => {
 
 
         const editLinks = await screen.findAllByText(/edit/i);
-        userEvent.click(editLinks[0]);
+        fireEvent.click(editLinks[0]);
         const submitButton = await screen.findByDisplayValue(/submit/i)
         userEvent.click(submitButton);
 
