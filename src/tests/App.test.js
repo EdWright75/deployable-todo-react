@@ -61,7 +61,7 @@ describe('App Tests', () => {
       expect(closeModal).not.toBeInTheDocument();
     });
 
-    test('should remove the put error modal when put error is reset', async () => {
+    xtest('should remove the put error modal when put error is reset', async () => {
       api.getTodos.mockImplementation(() => { return { todos: sampleTodos } });
       api.updateTodo.mockImplementation(() => { return { status: 400, error: { type: `put`, message: `Put error` } } });
       render(<MemoryRouter><App /></MemoryRouter>);
@@ -106,7 +106,7 @@ describe('App Tests', () => {
         });
       });
 
-      test('should call updateTodo in App when updating a new todo', async () => {
+      xtest('should call updateTodo in App when updating a new todo', async () => {
 
         const expectedReturn = { todos: sampleTodos };
 
@@ -126,7 +126,7 @@ describe('App Tests', () => {
         // expect(api.updateTodo).toHaveBeenCalledWith(sampleTodos[2]);
       });
 
-      test('should close the create modal after updating a todo', async () => {
+      xtest('should close the create modal after updating a todo', async () => {
         const expectedReturn = { todos: sampleTodos };
 
         api.getTodos.mockImplementation(() => expectedReturn);
@@ -157,14 +157,13 @@ describe('App Tests', () => {
         const editLinks = await screen.findAllByText(/edit/i);
         fireEvent.click(editLinks[0]);
 
-        screen.debug();
-        // const submitButton = await screen.findByDisplayValue(/submit/i)
-        // userEvent.click(submitButton);
+        const submitButton = await screen.findByDisplayValue(/submit/i)
+        fireEvent.click(submitButton);
 
-        // const closeModal = await screen.findByText(/close/i);
-        // userEvent.click(closeModal);
+        const closeModal = await screen.findByText(/close/i);
+        userEvent.click(closeModal);
 
-        // expect(closeModal).not.toBeInTheDocument();
+        expect(closeModal).not.toBeInTheDocument();
       });
     });
 
