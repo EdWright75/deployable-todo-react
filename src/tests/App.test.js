@@ -155,7 +155,7 @@ describe('App Tests', () => {
         render(<MemoryRouter><App /></MemoryRouter>);
 
         const editLinks = await screen.findAllByText(/edit/i);
-        await fireEvent.click(editLinks[0]);
+        userEvent.click(editLinks[0]);
         
         const submitButton = await screen.findByDisplayValue(/submit/i);
         console.log(submitButton);
