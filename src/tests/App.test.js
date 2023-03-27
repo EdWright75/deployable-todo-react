@@ -159,7 +159,7 @@ describe('App Tests', () => {
         // await screen.debug();
 
         const submitButton = await screen.findByDisplayValue(/submit/i)
-        // fireEvent.click(submitButton);
+        fireEvent.click(submitButton);
 
         // const closeModal = await screen.findByText(/close/i);
         // userEvent.click(closeModal);
