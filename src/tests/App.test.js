@@ -2,14 +2,18 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 
+jest.mock('../asyncFunctions/todoAPICalls');
+
 import App from '../App';
 import * as api from '../asyncFunctions/todoAPICalls';
 
 import sampleTodos from '../sampleTodos.json';
 
-jest.mock('src/asyncFunctions/todoAPICalls');
+
 
 describe('App Tests', () => {
+
+
 
   afterEach(() => jest.resetAllMocks());
 
