@@ -160,10 +160,10 @@ describe('App Tests', () => {
         const submitButton = await screen.findByDisplayValue(/submit/i);
         userEvent.click(submitButton);
 
-        // const closeModal = await screen.findByText(/close/i);`
-        // userEvent.click(closeModal);
+        const closeModal = await screen.findByText(/close/i);
+        userEvent.click(closeModal);
 
-        // expect(closeModal).not.toBeInTheDocument();`
+        expect(closeModal).not.toBeInTheDocument();
       });
     });
 
