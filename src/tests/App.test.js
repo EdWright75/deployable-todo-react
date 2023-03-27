@@ -161,7 +161,7 @@ describe('App Tests', () => {
         const submitButton = await screen.findByDisplayValue(/submit/i)
         fireEvent.click(submitButton);
 
-        // const closeModal = await screen.findByText(/close/i);
+        const closeModal = await screen.findByText(/close/i);
         // userEvent.click(closeModal);
 
         // expect(closeModal).not.toBeInTheDocument();`
