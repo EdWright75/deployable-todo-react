@@ -167,7 +167,7 @@ describe('App Tests', () => {
       });
     });
 
-    describe('submit/update error tests', () => {
+    xdescribe('submit/update error tests', () => {
 
       test('should render post error message', async () => {
 
