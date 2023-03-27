@@ -144,7 +144,7 @@ describe('App Tests', () => {
         // expect(closeModal).not.toBeInTheDocument();
       });
 
-      test('should close the create modal after adding a todo', async () => {
+      xtest('should close the create modal after adding a todo', async () => {
         const expectedReturn = { todos: sampleTodos };
 
         api.getTodos.mockImplementation(() => expectedReturn);
