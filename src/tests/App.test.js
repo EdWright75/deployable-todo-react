@@ -167,7 +167,7 @@ describe('App Tests', () => {
       });
     });
 
-    xdescribe('submit/update error tests', () => {
+    describe('submit/update error tests', () => {
 
       test('should render post error message', async () => {
 
@@ -193,7 +193,6 @@ describe('App Tests', () => {
         api.updateTodo.mockImplementation(() => { return { error: { type: `put`, message: `Put error` } } });
 
         render(<MemoryRouter><App /></MemoryRouter>);
-
 
         const editLinks = await screen.findAllByText(/edit/i);
         fireEvent.click(editLinks[0]);
