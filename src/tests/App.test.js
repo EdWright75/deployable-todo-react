@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 
@@ -65,9 +65,14 @@ describe('App Tests', () => {
       render(<MemoryRouter><App /></MemoryRouter>);
 
       const editLinks = await screen.findAllByText(/edit/i);
-      // userEvent.click(editLinks[0]);
-      userEvent.click(editLinks[0]);
-      await screen.debug();
+      await fireEvent.click(editLinks[0]);
+
+      await waitFor(() => {
+        const submitButton = screen.getByDisplayValue(/submit/i);
+        expect(submitButton).toBeInTheDocument();
+      });
+      
+      screen.debug();
       // const submitButton = screen.getByDisplayValue(/submit/i);
       // expect(submitButton).toBeInTheDocument();
       // userEvent.click(submitButton);
