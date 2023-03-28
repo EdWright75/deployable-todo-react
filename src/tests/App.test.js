@@ -68,7 +68,8 @@ describe('App Tests', () => {
       // userEvent.click(editLinks[0]);
       await fireEvent.click(editLinks[0]);
       screen.debug()
-      // const submitButton = await screen.findByDisplayValue(/submit/i)
+      const submitButton = await screen.findByDisplayValue(/submit/i);
+      expect(submitButton).toBeInTheDocument();
       // userEvent.click(submitButton);
 
       // const closeModal = await screen.findByText(/close/i);
