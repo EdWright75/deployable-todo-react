@@ -126,8 +126,8 @@ describe('App Tests', () => {
         });
       });
 
-      xtest('should call updateTodo in App when updating a new todo', async () => {
-
+      test('should call updateTodo in App when updating a new todo', async () => {
+        let submitButton;
         const expectedReturn = { todos: sampleTodos };
 
         api.getTodos.mockImplementation(() => expectedReturn);
@@ -136,14 +136,29 @@ describe('App Tests', () => {
         render(<MemoryRouter><App /></MemoryRouter>);
 
         const editLinks = await screen.findAllByText(/edit/i);
-        fireEvent.click(editLinks[0]);
+        userEvent.click(editLinks[0]);
+
+        await screen;
+
+        await waitFor(() => {
+          submitButton = screen.getByDisplayValue(/submit/i);
+        });
+        
+        await fireEvent.click(submitButton);
+        await screen;
+      
+        await waitFor(() => {
+          screen.getByText(/todo updated/i);
+        });
+
+
         // const submitButton = await screen.findByDisplayValue(/submit/i)
         // userEvent.click(submitButton);
 
         // await screen.findByText(/todo updated/i);
 
-        // expect(api.updateTodo).toHaveBeenCalledTimes(1);
-        // expect(api.updateTodo).toHaveBeenCalledWith(sampleTodos[2]);
+        expect(api.updateTodo).toHaveBeenCalledTimes(1);
+        expect(api.updateTodo).toHaveBeenCalledWith(sampleTodos[2]);
       });
 
       xtest('should close the create modal after updating a todo', async () => {
