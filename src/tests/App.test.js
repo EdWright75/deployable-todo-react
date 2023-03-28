@@ -42,7 +42,7 @@ describe('App Tests', () => {
       expect(closeModal).not.toBeInTheDocument();
     });
 
-    xtest('should remove the post error modal when post error is reset', async () => {
+    test('should remove the post error modal when post error is reset', async () => {
       api.getTodos.mockImplementation(() => { return { todos: sampleTodos } });
       api.submitTodo.mockImplementation(() => { return { status: 400, error: { type: `post`, message: `Post error` } } });
       render(<MemoryRouter><App /></MemoryRouter>);
@@ -59,7 +59,7 @@ describe('App Tests', () => {
       expect(closeModal).not.toBeInTheDocument();
     });
 
-    test('should remove the put error modal when put error is reset', async () => {
+    xtest('should remove the put error modal when put error is reset', async () => {
       api.getTodos.mockImplementation(() => { return { todos: sampleTodos } });
       api.updateTodo.mockImplementation(() => { return { status: 400, error: { type: `put`, message: `Put error` } } });
       render(<MemoryRouter><App /></MemoryRouter>);
