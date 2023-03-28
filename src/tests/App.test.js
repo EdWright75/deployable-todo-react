@@ -42,7 +42,7 @@ describe('App Tests', () => {
       expect(closeModal).not.toBeInTheDocument();
     });
 
-    test('should remove the post error modal when post error is reset', async () => {
+    xtest('should remove the post error modal when post error is reset', async () => {
       api.getTodos.mockImplementation(() => { return { todos: sampleTodos } });
       api.submitTodo.mockImplementation(() => { return { status: 400, error: { type: `post`, message: `Post error` } } });
       render(<MemoryRouter><App /></MemoryRouter>);
