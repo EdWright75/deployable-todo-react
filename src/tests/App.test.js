@@ -60,6 +60,8 @@ describe('App Tests', () => {
     });
 
     test('should remove the put error modal when put error is reset', async () => {
+      let submitButton;
+      let closeModal;
       api.getTodos.mockImplementation(() => { return { todos: sampleTodos } });
       api.updateTodo.mockImplementation(() => { return { status: 400, error: { type: `put`, message: `Put error` } } });
       render(<MemoryRouter><App /></MemoryRouter>);
@@ -67,24 +69,24 @@ describe('App Tests', () => {
       const editLinks = await screen.findAllByText(/edit/i);
       userEvent.click(editLinks[0]);
 
-      // await screen;
-      let submitButton;
-      let closeModal;
+      await screen;
 
-        await waitFor(() => {
-          submitButton = screen.getByDisplayValue(/submit/i);
-        });
+      await waitFor(() => {
+        submitButton = screen.getByDisplayValue(/submit/i);
+      });
 
-      userEvent.click(submitButton);
+      await fireEvent.click(submitButton);
+      await screen;
       
       await waitFor(() => {
         closeModal = screen.getByText(/close/i);
-        expect(closeModal).toBeInTheDocument();
+        
       });
       
-      userEvent.click(closeModal);
+      await fireEvent.click(closeModal);
+      await screen;
 
-      await waitFor(() => expect(closeModal).not.toBeInTheDocument());
+      expect(closeModal).not.toBeInTheDocument();
       
       // const submitButton = screen.getByDisplayValue(/submit/i);
       // expect(submitButton).toBeInTheDocument();
