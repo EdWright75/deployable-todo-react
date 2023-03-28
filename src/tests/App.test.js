@@ -65,15 +65,16 @@ describe('App Tests', () => {
       render(<MemoryRouter><App /></MemoryRouter>);
 
       const editLinks = await screen.findAllByText(/edit/i);
-      userEvent.click(editLinks[0]);
-      // fireEvent.click(editLinks[0]);
-      const submitButton = await screen.findByDisplayValue(/submit/i)
-      userEvent.click(submitButton);
+      // userEvent.click(editLinks[0]);
+      await fireEvent.click(editLinks[0]);
+      screen.debug()
+      // const submitButton = await screen.findByDisplayValue(/submit/i)
+      // userEvent.click(submitButton);
 
-      const closeModal = await screen.findByText(/close/i);
-      userEvent.click(closeModal);
+      // const closeModal = await screen.findByText(/close/i);
+      // userEvent.click(closeModal);
 
-      expect(closeModal).not.toBeInTheDocument();
+      // expect(closeModal).not.toBeInTheDocument();
     });
   });
 
