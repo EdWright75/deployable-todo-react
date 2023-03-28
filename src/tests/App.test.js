@@ -68,14 +68,23 @@ describe('App Tests', () => {
       userEvent.click(editLinks[0]);
 
       // await screen;
+      let submitButton;
+      let closeModal;
 
-      setTimeout(async () => {
         await waitFor(() => {
-          const submitButton = screen.getByDisplayValue(/submit/i);
-          expect(submitButton).toBeInTheDocument();
+          submitButton = screen.getByDisplayValue(/submit/i);
         });
-      }, 3000);
+
+      userEvent.click(submitButton);
       
+      await waitFor(() => {
+        closeModal = screen.getByText(/close/i);
+        expect(closeModal).toBeInTheDocument();
+      });
+      
+      userEvent.click(closeModal);
+
+      await waitFor(() => expect(closeModal).not.toBeInTheDocument());
       
       // const submitButton = screen.getByDisplayValue(/submit/i);
       // expect(submitButton).toBeInTheDocument();
