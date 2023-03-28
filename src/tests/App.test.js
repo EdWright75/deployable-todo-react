@@ -67,7 +67,7 @@ describe('App Tests', () => {
       const editLinks = await screen.findAllByText(/edit/i);
       userEvent.click(editLinks[0]);
 
-      await screen;
+      // await screen;
 
       setTimeout(async () => {
         await waitFor(() => {
