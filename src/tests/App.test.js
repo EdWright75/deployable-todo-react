@@ -77,7 +77,7 @@ describe('App Tests', () => {
     });
   });
 
-  xdescribe('Submit todo and update todo render tests', () => {
+  describe('Submit todo and update todo render tests', () => {
 
     describe('handler call tests', () => {
       test('should call submitTodo in App when adding a new todo', async () => {
@@ -104,7 +104,7 @@ describe('App Tests', () => {
         });
       });
 
-      test('should call updateTodo in App when updating a new todo', async () => {
+      xtest('should call updateTodo in App when updating a new todo', async () => {
 
         const expectedReturn = { todos: sampleTodos };
 
@@ -124,7 +124,7 @@ describe('App Tests', () => {
         // expect(api.updateTodo).toHaveBeenCalledWith(sampleTodos[2]);
       });
 
-      test('should close the create modal after updating a todo', async () => {
+      xtest('should close the create modal after updating a todo', async () => {
         const expectedReturn = { todos: sampleTodos };
 
         api.getTodos.mockImplementation(() => expectedReturn);
@@ -144,7 +144,7 @@ describe('App Tests', () => {
         // expect(closeModal).not.toBeInTheDocument();
       });
 
-      test('should close the create modal after adding a todo', async () => {
+      xtest('should close the create modal after adding a todo', async () => {
         const expectedReturn = { todos: sampleTodos };
 
         api.getTodos.mockImplementation(() => expectedReturn);
@@ -165,7 +165,7 @@ describe('App Tests', () => {
       });
     });
 
-    xdescribe('submit/update error tests', () => {
+    describe('submit/update error tests', () => {
 
       test('should render post error message', async () => {
 
@@ -184,7 +184,7 @@ describe('App Tests', () => {
         expect(postErrors.length).toBeGreaterThan(0);
       });
 
-      test('should render a Put error message', async () => {
+      xtest('should render a Put error message', async () => {
         const expectedReturn = { todos: sampleTodos };
 
         api.getTodos.mockImplementation(() => expectedReturn);
