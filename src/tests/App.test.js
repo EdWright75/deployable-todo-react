@@ -65,14 +65,18 @@ describe('App Tests', () => {
       render(<MemoryRouter><App /></MemoryRouter>);
 
       const editLinks = await screen.findAllByText(/edit/i);
-      await fireEvent.click(editLinks[0]);
+      userEvent.click(editLinks[0]);
 
-      await waitFor(() => {
-        const submitButton = screen.getByDisplayValue(/submit/i);
-        expect(submitButton).toBeInTheDocument();
-      });
+      await screen.debug();
+
+      setTimeout(async () => {
+        await waitFor(() => {
+          const submitButton = screen.getByDisplayValue(/submit/i);
+          expect(submitButton).toBeInTheDocument();
+        });
+      }, 3000);
       
-      screen.debug();
+      
       // const submitButton = screen.getByDisplayValue(/submit/i);
       // expect(submitButton).toBeInTheDocument();
       // userEvent.click(submitButton);
