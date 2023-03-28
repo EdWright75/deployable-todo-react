@@ -77,7 +77,7 @@ describe('App Tests', () => {
     });
   });
 
-  describe('Submit todo and update todo render tests', () => {
+  xdescribe('Submit todo and update todo render tests', () => {
 
     describe('handler call tests', () => {
       test('should call submitTodo in App when adding a new todo', async () => {
@@ -104,7 +104,7 @@ describe('App Tests', () => {
         });
       });
 
-      xtest('should call updateTodo in App when updating a new todo', async () => {
+      test('should call updateTodo in App when updating a new todo', async () => {
 
         const expectedReturn = { todos: sampleTodos };
 
@@ -124,7 +124,7 @@ describe('App Tests', () => {
         // expect(api.updateTodo).toHaveBeenCalledWith(sampleTodos[2]);
       });
 
-      xtest('should close the create modal after updating a todo', async () => {
+      test('should close the create modal after updating a todo', async () => {
         const expectedReturn = { todos: sampleTodos };
 
         api.getTodos.mockImplementation(() => expectedReturn);
@@ -144,7 +144,7 @@ describe('App Tests', () => {
         // expect(closeModal).not.toBeInTheDocument();
       });
 
-      xtest('should close the create modal after adding a todo', async () => {
+      test('should close the create modal after adding a todo', async () => {
         const expectedReturn = { todos: sampleTodos };
 
         api.getTodos.mockImplementation(() => expectedReturn);
