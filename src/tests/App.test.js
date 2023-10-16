@@ -7,7 +7,7 @@ import * as api from '../asyncFunctions/todoAPICalls.js';
 
 import sampleTodos from '../sampleTodos.json';
 
-jest.mock('../asyncFunctions/todoApiCalls');
+jest.mock('../asyncFunctions/todoApiCalls.js');
 
 describe('App Tests', () => {
 
