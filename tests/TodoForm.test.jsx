@@ -176,7 +176,7 @@ describe(`TodoForm test suite`, () => {
             const modalCloseBtn = screen.getByText(/close/i);
             await userEvent.click(modalCloseBtn);
 
-            expect(screen.getByText(`Redirected home`)).toBeInTheDocument();
+            expect(await screen.getByText(`Redirected home`)).toBeInTheDocument();
         });
     });
 });
