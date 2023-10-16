@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 
 import App from '../App';
-import * as api from '../asyncFunctions/todoAPICalls';
+import * as api from '../asyncFunctions/todoAPICalls.js';
 
 import sampleTodos from '../sampleTodos.json';
 
