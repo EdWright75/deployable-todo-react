@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1694095407498" clover="3.2.0">
+  <project timestamp="1694095407499" name="All files">
+    <metrics statements="141" coveredstatements="140" conditionals="54" coveredconditionals="54" methods="44" coveredmethods="43" elements="239" coveredelements="237" complexity="0" loc="141" ncloc="141" packages="4" files="12" classes="12"/>
+    <package name="src">
+      <metrics statements="18" coveredstatements="18" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
+      <file name="App.jsx" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/App.jsx">
+        <metrics statements="18" coveredstatements="18" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="17" type="stmt"/>
+        <line num="15" count="17" type="stmt"/>
+        <line num="17" count="17" type="stmt"/>
+        <line num="18" count="9" type="stmt"/>
+        <line num="19" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="30" count="17" type="stmt"/>
+        <line num="31" count="8" type="stmt"/>
+        <line num="34" count="17" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="46" count="17" type="stmt"/>
+        <line num="48" count="2" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="src.Components">
+      <metrics statements="76" coveredstatements="76" conditionals="42" coveredconditionals="42" methods="22" coveredmethods="22"/>
+      <file name="AddEditTodo.jsx" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/Components/AddEditTodo.jsx">
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="14" count="13" type="stmt"/>
+        <line num="16" count="13" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="22" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="13" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+      </file>
+      <file name="AllTodos.jsx" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/Components/AllTodos.jsx">
+        <metrics statements="12" coveredstatements="12" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="42" type="stmt"/>
+        <line num="15" count="42" type="stmt"/>
+        <line num="16" count="22" type="stmt"/>
+        <line num="17" count="22" type="cond" truecount="3" falsecount="0"/>
+        <line num="18" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="42" type="stmt"/>
+        <line num="23" count="42" type="stmt"/>
+        <line num="24" count="52" type="stmt"/>
+        <line num="26" count="52" type="stmt"/>
+        <line num="29" count="42" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+      </file>
+      <file name="Footer.jsx" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/Components/Footer.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="18" type="stmt"/>
+      </file>
+      <file name="Header.jsx" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/Components/Header.jsx">
+        <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="19" type="stmt"/>
+        <line num="9" count="19" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="15" count="19" type="stmt"/>
+        <line num="27" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="24" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="Todo.jsx" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/Components/Todo.jsx">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="57" type="stmt"/>
+        <line num="9" count="57" type="stmt"/>
+        <line num="10" count="57" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="57" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="57" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+      </file>
+      <file name="TodoForm.jsx" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/Components/TodoForm.jsx">
+        <metrics statements="36" coveredstatements="36" conditionals="21" coveredconditionals="21" methods="11" coveredmethods="11"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="311" type="stmt"/>
+        <line num="10" count="311" type="stmt"/>
+        <line num="11" count="311" type="stmt"/>
+        <line num="12" count="311" type="stmt"/>
+        <line num="14" count="311" type="stmt"/>
+        <line num="16" count="311" type="stmt"/>
+        <line num="17" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="24" type="cond" truecount="4" falsecount="0"/>
+        <line num="19" count="24" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="30" count="23" type="stmt"/>
+        <line num="31" count="23" type="stmt"/>
+        <line num="32" count="23" type="stmt"/>
+        <line num="33" count="23" type="stmt"/>
+        <line num="34" count="23" type="stmt"/>
+        <line num="38" count="311" type="stmt"/>
+        <line num="39" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="47" count="311" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="49" count="5" type="stmt"/>
+        <line num="50" count="5" type="stmt"/>
+        <line num="51" count="5" type="stmt"/>
+        <line num="52" count="5" type="stmt"/>
+        <line num="56" count="311" type="stmt"/>
+        <line num="58" count="147" type="cond" truecount="2" falsecount="0"/>
+        <line num="63" count="311" type="stmt"/>
+        <line num="64" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="69" count="311" type="stmt"/>
+        <line num="82" count="129" type="stmt"/>
+        <line num="97" count="1" type="stmt"/>
+        <line num="110" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components.utils">
+      <metrics statements="36" coveredstatements="35" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="14"/>
+      <file name="DateCreated.jsx" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/Components/utils/DateCreated.jsx">
+        <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="150" type="stmt"/>
+        <line num="7" count="150" type="stmt"/>
+        <line num="8" count="150" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="150" type="stmt"/>
+        <line num="15" count="150" type="stmt"/>
+        <line num="16" count="150" type="stmt"/>
+        <line num="19" count="150" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+      </file>
+      <file name="InfoModal.jsx" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/Components/utils/InfoModal.jsx">
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="18" count="9" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="24" count="9" type="stmt"/>
+        <line num="25" count="9" type="stmt"/>
+        <line num="28" count="9" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="69" count="4" type="stmt"/>
+      </file>
+      <file name="Todo.model.js" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/Components/utils/Todo.model.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="62" type="stmt"/>
+        <line num="4" count="62" type="stmt"/>
+        <line num="5" count="62" type="stmt"/>
+        <line num="6" count="62" type="stmt"/>
+      </file>
+      <file name="generateId.js" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/Components/utils/generateId.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="16" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services">
+      <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="todosdata.service.js" path="/Users/edwright/DFA Repos/NewGitHubRepos/developing-with-reactjs/activity-files/RoutedApplication/solution-activity21/src/services/todosdata.service.js">
+        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
