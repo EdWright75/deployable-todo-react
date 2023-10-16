@@ -2,11 +2,11 @@ import axios from 'axios';
 
 export const getTodosService = async () => {
     try {
-        const res = await axios.get(import.meta.env.VITE_APP_TODOSURL);
+        const res = await axios.get(import.meta.env.VITE_APP_TODOSURL);     
         if (res.data?.length > 0) {
             // Added for SQL databases
             res.data.forEach(todo => {
-                if (todo.id) {
+                if (todo?.id) {
                     delete Object.assign(todo, { [`_id`]: todo[`id`].toString() })[`id`];
                 }
             });   
